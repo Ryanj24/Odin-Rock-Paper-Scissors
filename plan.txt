@@ -1,0 +1,10 @@
+1. Declare the necessary variables:
+        1. possible_choices
+        2. player_choice
+        3. computer_choice
+        4. player_score
+        5. computer_score
+
+2. create playRound function that takes as parameters the player_choice & computer_choice variables then checks who wins before updating the scores and printing the winner and the current scores.
+
+3. Write new function game within which playRound is called within a for loop 
