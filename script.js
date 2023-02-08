@@ -1,56 +1,76 @@
-function game() {
+// Play a single round of rock, paper, scissors passing both the user and computer choices 
+// to the function
+function playRound(playerChoice, computerChoice) {
 
-    // Initialise possible choices variable for computer to choose from and initialise the player and computer scores to 0
-    const possible_choices = ["rock", "paper", "scissors"];
-    let player_score = 0, computer_score = 0;
+    // Define variable to store round winner
+    let winner = "";
 
-
-    // Create loop of 5 rounds
-    for (i = 0; i < 5; i++) {
-        // Get the player choice for the round via input and computer choice via Math.random() applied to the possible choices list
-        const player_choice = prompt("Rock, paper or scissors: ").toLowerCase();
-        const computer_choice = possible_choices[Math.floor(Math.random() * 3)];
-
-        //console.log(playRound(player_choice, computer_choice));
-
-        if (player_choice === "rock" && computer_choice === "rock") {
-            console.log("Draw, no one gets a point");
-        } else if (player_choice === "rock" && computer_choice === "paper") {
-            computer_score++;
-            console.log("You lose! computer gets a point");
-        } else if (player_choice === "rock" && computer_choice === "scissors") {
-            player_score++;
-            console.log("You win! you get a point");
-        } else if (player_choice === "paper" && computer_choice === "rock") {
-            player_score++;
-            console.log("You win! you get a point");
-        } else if (player_choice === "paper" && computer_choice === "paper") {
-            console.log("Draw, no one gets a point");
-        } else if (player_choice === "paper" && computer_choice === "scissors") {
-            computer_score++;
-            console.log("You lose! computer gets a point");
-        } else if (player_choice === "scissors" && computer_choice === "rock") {
-            computer_score++;
-            console.log("You lose! computer gets a point");
-        } else if (player_choice === "scissors" && computer_choice === "paper") {
-            player_score++;
-            console.log("You win! you get a point");
-        } else if (player_choice === "scissors" && computer_choice === "scissors") {
-            console.log("Draw, no one gets a point");
-        }
-        console.log(`Current Scores:
-        Player Score: ${player_score}
-        Computer Score: ${computer_score}`);
+    // All different possible outcomes from the round
+    if (playerChoice === "rock" && computerChoice === "rock") {
+        winner = `Tie! ${playerChoice} doesn't beat ${computerChoice}`;
+    } else if (playerChoice === "rock" && computerChoice === "paper") {
+        winner = `You Lose! ${computerChoice} beats ${playerChoice}`;
+    } else if (playerChoice === "rock" && computerChoice === "scissors") {
+        winner = `You Win! ${playerChoice} beats ${computerChoice}`;
+    } else if (playerChoice === "paper" && computerChoice === "rock") {
+        winner = `You Win! ${playerChoice} beats ${computerChoice}`;
+    } else if (playerChoice === "paper" && computerChoice === "paper") {
+        winner = `Tie! ${playerChoice} doesn't beat ${computerChoice}`;
+    } else if (playerChoice === "paper" && computerChoice === "scissors") {
+        winner = `You Lose! ${computerChoice} beats ${playerChoice}`;
+    } else if (playerChoice === "scissors" && computerChoice === "rock") {
+        winner = `You Lose! ${computerChoice} beats ${playerChoice}`;
+    } else if (playerChoice === "scissors" && computerChoice === "paper") {
+        winner = `You Win! ${playerChoice} beats ${computerChoice}`;
+    } else if (playerChoice === "scissors" && computerChoice === "scissors") {
+        winner = `Tie! ${playerChoice} doesn't beat ${computerChoice}`;
     }
 
-    console.log(`Final Scores:
-    Player Score: ${player_score}
-    Computer Score: ${computer_score}`)
-
-
+    // Return the round winner
+    return winner;
 }
 
-game();
+function game() {
+    // Possible choices for the user and computer to select from
+    possibleChoices = ["rock", "paper", "scissors"];
 
+    // Initialise variables to keep track of scores
+    let playerScore = 0, computerScore = 0;
+    let overallWinner = "";
 
+    // Loop for 5 rounds of rock, paper, scissors
+    for (i = 0; i < 5; i++) {
+        // Player and Computer choices
+        let playerChoice = prompt("Rock, paper or sicssors?").toLowerCase();
+        const computerChoice = possibleChoices[Math.floor(Math.random() * 3)];
 
+        // Check to ensure user inputs a valid choice
+        while (!possibleChoices.includes(playerChoice)) {
+            playerChoice = prompt("Rock, paper or sicssors?").toLowerCase();
+        }
+
+        // Simulate the round, storing the result in roundWinner variable
+        const roundWinner = playRound(playerChoice, computerChoice);
+
+        // Updating the scores depending on who won the round
+        if (roundWinner === `You Win! ${playerChoice} beats ${computerChoice}`) {
+            playerScore++;
+        } else if (roundWinner === `You Lose! ${computerChoice} beats ${playerChoice}`) {
+            computerScore++;
+        }
+    }
+
+    // Checks for the final scores to determine the overall winner
+    if (playerScore === computerScore) {
+        overallWinner = `Tie! Player Score: ${playerScore} vs Computer Score: ${computerScore}`;
+    } else if (playerScore > computerScore) {
+        overallWinner = `You Win! Player Score: ${playerScore} vs Computer Score: ${computerScore}`;
+    } else {
+        overallWinner = `You Lose! Player Score: ${playerScore} vs Computer Score: ${computerScore}`;
+    }
+
+    // Return the overall winner of the game
+    return overallWinner;
+}
+
+console.log(game());
