@@ -62,11 +62,11 @@ function game() {
 
     // Checks for the final scores to determine the overall winner
     if (playerScore === computerScore) {
-        overallWinner = `Tie! Player Score: ${playerScore} vs Computer Score: ${computerScore}`;
+        overallWinner = `Tie! \n Player Score: ${playerScore} \n Computer Score: ${computerScore}`;
     } else if (playerScore > computerScore) {
-        overallWinner = `You Win! Player Score: ${playerScore} vs Computer Score: ${computerScore}`;
+        overallWinner = `You Win! \n Player Score: ${playerScore} \n Computer Score: ${computerScore}`;
     } else {
-        overallWinner = `You Lose! Player Score: ${playerScore} vs Computer Score: ${computerScore}`;
+        overallWinner = `You Lose! \n Player Score: ${playerScore} \n Computer Score: ${computerScore}`;
     }
 
     // Return the overall winner of the game
