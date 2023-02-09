@@ -16,6 +16,17 @@ body {
     background-color: #278be2;
 }
 
+button {
+    padding: 20px;
+    font-size: 50px;
+    background-color: transparent;
+    border: none;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
 input:hover {
     cursor: pointer;
 }
@@ -44,11 +55,10 @@ input:hover {
     padding: 20px;
 }
 
-.roundSelection .roundDiv #decrease {
+.roundSelection .roundDiv .decreaseButton {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
     margin-right: 70px;
 }
 
@@ -60,11 +70,10 @@ input:hover {
     font-size: 80px;
 }
 
-.roundSelection .roundDiv #increase {
+.roundSelection .roundDiv .increaseButton {
     display: flex;
     justify-content: center;
     align-items: center;
-    font-size: 60px;
     margin-left: 70px;
 }
 
