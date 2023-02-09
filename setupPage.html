@@ -5,8 +5,26 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Game Setup</title>
+    <link rel="stylesheet" href="setupPage.css">
+    <script src="https://kit.fontawesome.com/10b01c19ab.js" crossorigin="anonymous"></script>
 </head>
 <body>
+    <section class="header">
+        <h2>
+            Select the number of rounds below
+        </h2>
+    </section>
+    <form class="roundSelection">
+        <div class="roundDiv">
+            <div id="decrease"><i class="fa-solid fa-minus"></i></div>
+            <div id="rounds">0</div>
+            <div id="increase"><i class="fa-solid fa-plus"></i></div>
+        </div>
+        <div class="submitDiv">
+            <input type="submit" value="Enter">
+        </div>
+    </form>
+
     <script src="setup.js"></script>
 </body>
 </html>

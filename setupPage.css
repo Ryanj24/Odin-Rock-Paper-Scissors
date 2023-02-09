@@ -7,3 +7,76 @@
     font-family: "Salsa", sans-serif, Helvetica;
     color: #00203FFF;
 }
+
+body {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    background-color: #278be2;
+}
+
+input:hover {
+    cursor: pointer;
+}
+
+.header {
+    padding: 20px;
+    margin-top: 150px;
+    margin-bottom: 150px;
+}
+
+.header h2 {
+    font-size: 40px;
+}
+
+.roundSelection {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+}
+
+.roundSelection .roundDiv {
+    display: flex;
+    justify-content: space-around;
+    padding: 20px;
+}
+
+.roundSelection .roundDiv #decrease {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    margin-right: 70px;
+}
+
+.roundSelection .roundDiv #rounds {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    font-size: 80px;
+}
+
+.roundSelection .roundDiv #increase {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 60px;
+    margin-left: 70px;
+}
+
+.roundSelection .submitDiv {
+    margin-top: 100px;
+}
+
+.roundSelection .submitDiv input{
+    padding: 20px 40px;
+    font-size: 25px;
+    border-radius: 10px;
+}
+
+
+
