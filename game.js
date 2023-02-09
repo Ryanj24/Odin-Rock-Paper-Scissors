@@ -1,4 +1,4 @@
-// Play a single round of rock, paper, scissors passing both the user and computer choices 
+/* Play a single round of rock, paper, scissors passing both the user and computer choices 
 // to the function
 function playRound(playerChoice, computerChoice) {
 
@@ -73,4 +73,10 @@ function game() {
     return overallWinner;
 }
 
-console.log(game());
+console.log(game());*/
+
+
+
+// Need to change the round back to number as localstorage converts to string
+const rounds = parseInt(localStorage.getItem("rounds"));
+console.log(typeof(rounds));
