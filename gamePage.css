@@ -7,3 +7,94 @@
     font-family: "Salsa", sans-serif, Helvetica;
     color: #00203FFF;
 }
+
+body {
+    height: 100vh;
+    background-color: #278be2;
+    overflow: hidden;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.round-header {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 20px 0;
+    font-size: 50px;
+    margin: 100px 0;
+}
+
+.round-header #round-count {
+    padding-left: 15px;
+    padding-right: 40px;
+}
+
+.main-container {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px 0 30px 30px;
+    margin-bottom: 70px;
+}
+
+.main-container .player-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 40px;
+}
+
+.main-container .player-score h1{
+    margin-bottom: 20px;
+}
+
+.main-container .computer-score {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+    font-size: 40px;
+}
+
+.main-container .computer-score h1{
+    margin-bottom: 20px;
+    padding-left: 20px;
+}
+
+.main-container .choice-selection {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 20px;
+    margin: 0 50px 0 100px;
+}
+
+.main-container .choice-selection button{
+    padding: 20px;
+    font-size: 10px;
+    border: none;
+    border-radius: 20px;
+    background-color: #00203FFF;
+}
+
+.main-container .choice-selection #paper{
+    margin: 0 50px;
+}
+
+.round-winner {
+    width: 100%;
+    text-align: center;
+    font-size: 40px;
+    padding: 20px
+}
+
+.round-winner h1 {
+    padding-right: 40px;
+}

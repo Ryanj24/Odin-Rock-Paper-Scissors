@@ -5,8 +5,33 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Rock, Paper, Scissors</title>
+    <link rel="stylesheet" href="gamePage.css">
 </head>
 <body>
+    <section class="round-header">
+        <h1>Round:</h1>
+        <h1 id="round-count">01</h1>
+    </section>
+    <section class="main-container">
+        <div class="player-score">
+            <h1>Player Score</h1>
+            <h2 id="player-score-value">0</h2>
+        </div>
+        <div class="choice-selection">
+            <button id="rock"><img src="stone.png" alt="Picture of a rock"></button>
+            <button id="paper"><img src="paper.png" alt="Picture of sheets of paper"></button>
+            <button id="scissors"><img src="scissors.png" alt="Picture of a pair of scissors"></button>
+        </div>
+        <div class="computer-score">
+            <h1>Computer Score</h1>
+            <h2 id="computer-score-value">0</h2>
+        </div>
+    </section>
+    <section class="round-winner">
+        <h1 id="round-winner-text">You Win! Paper beats Rock!</h1>
+    </section>
+
+
     <script src="game.js"></script>
 </body>
 </html>
