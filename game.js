@@ -11,22 +11,55 @@ const scissors = document.querySelector("#scissors");
 const roundWinner = document.querySelector("#round-winner-text");
 let playerChoice = "";
 
+possibleChoices = ["rock", "paper", "scissors"];
+
+
 let playerScoreCounter = 0;
 let computerScoreCounter = 0;
 
 rock.addEventListener("click", () => {
     playerChoice = "rock";
+    const computerChoice = possibleChoices[Math.floor(Math.random() * 3)];
     //console.log(playerChoice);
+    const WINNER = playRound(playerChoice, computerChoice);
+
+    if (WINNER === "player") {
+        playerScoreCounter++;
+        playerScore.textContent = playerScoreCounter;
+    } else if (WINNER === "computer") {
+        computerScoreCounter++;
+        computerScore.textContent = computerScoreCounter;
+    }
 })
 
 paper.addEventListener("click", () => {
     playerChoice = "paper";
+    const computerChoice = possibleChoices[Math.floor(Math.random() * 3)];
     //console.log(playerChoice);
+    const WINNER = playRound(playerChoice, computerChoice);
+
+    if (WINNER === "player") {
+        playerScoreCounter++;
+        playerScore.textContent = playerScoreCounter;
+    } else if (WINNER === "computer") {
+        computerScoreCounter++;
+        computerScore.textContent = computerScoreCounter;
+    }
 })
 
 scissors.addEventListener("click", () => {
     playerChoice = "scissors";
+    const computerChoice = possibleChoices[Math.floor(Math.random() * 3)];
     //console.log(playerChoice);
+    const WINNER = playRound(playerChoice, computerChoice);
+
+    if (WINNER === "player") {
+        playerScoreCounter++;
+        playerScore.textContent = playerScoreCounter;
+    } else if (WINNER === "computer") {
+        computerScoreCounter++;
+        computerScore.textContent = computerScoreCounter;
+    }
 })
 
 
@@ -62,6 +95,9 @@ function playRound(playerChoice, computerChoice) {
     return winner;
 }
 
+
+/*
+
 function game() {
     // Possible choices for the user and computer to select from
     possibleChoices = ["rock", "paper", "scissors"];
@@ -94,4 +130,4 @@ function game() {
     }
 }
 
-game();
+game();*/
