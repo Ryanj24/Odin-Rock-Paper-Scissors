@@ -40,12 +40,12 @@ increaseScore.addEventListener("click", function(e) {
 myForm.addEventListener("submit", function(e) {
     e.preventDefault();
 
-
+    // Store the points necessary to win in scoreNumber variable
     const scoreNumber = counter;
-    //console.log(scoreNumber)
-    //console.log(typeof(roundNumber));
-
+    
+    // Store the variable under "points" key in the browser local memory to be retreived in the game page
     localStorage.setItem("points", scoreNumber);
 
+    // Relocate the user to the game page
     window.location.href = "gamePage.html";
 })
