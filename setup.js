@@ -42,7 +42,7 @@ myForm.addEventListener("submit", function(e) {
 
 
     const scoreNumber = counter;
-    console.log(scoreNumber)
+    //console.log(scoreNumber)
     //console.log(typeof(roundNumber));
 
     localStorage.setItem("points", scoreNumber);
