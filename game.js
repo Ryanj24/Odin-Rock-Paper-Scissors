@@ -43,11 +43,11 @@ btns.forEach((button) => {
         }
 
         if (playerScoreCounter == pointsToWin || computerScoreCounter == pointsToWin) {
-            /*const finalPlayerScore = playerScoreCounter;
+            const finalPlayerScore = playerScoreCounter;
             const finalComputerScore = computerScoreCounter;
 
-            localStorage.setItem("player-Score", finalPlayerScore);
-            localStorage.setItem("computer-Score", finalComputerScore);*/
+            localStorage.setItem("final-user-score", finalPlayerScore);
+            localStorage.setItem("final-comp-score", finalComputerScore);
 
             window.location.href = "endPage.html";
         }
