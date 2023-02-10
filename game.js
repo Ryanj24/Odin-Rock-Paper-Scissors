@@ -1,8 +1,12 @@
-// Need to change the round back to number as localstorage converts to string
-const roundsToPlay = parseInt(localStorage.getItem("rounds"));
-//console.log(typeof(rounds));
+// Need to change the points back to number as localstorage converts to string
+const pointsToWin = parseInt(localStorage.getItem("points"));
+const pointsNumber = document.querySelector("#points-total");
 
-let roundNumber = document.querySelector("#round-count");
+pointsNumber.textContent = pointsToWin;
+
+
+
+
 let playerScore = document.querySelector("#player-score-value");
 let computerScore = document.querySelector("#computer-score-value");
 const rock = document.querySelector("#rock");
@@ -19,47 +23,18 @@ let computerScoreCounter = 0;
 
 rock.addEventListener("click", () => {
     playerChoice = "rock";
-    const computerChoice = possibleChoices[Math.floor(Math.random() * 3)];
-    //console.log(playerChoice);
-    const WINNER = playRound(playerChoice, computerChoice);
 
-    if (WINNER === "player") {
-        playerScoreCounter++;
-        playerScore.textContent = playerScoreCounter;
-    } else if (WINNER === "computer") {
-        computerScoreCounter++;
-        computerScore.textContent = computerScoreCounter;
-    }
+
 })
 
 paper.addEventListener("click", () => {
     playerChoice = "paper";
-    const computerChoice = possibleChoices[Math.floor(Math.random() * 3)];
-    //console.log(playerChoice);
-    const WINNER = playRound(playerChoice, computerChoice);
-
-    if (WINNER === "player") {
-        playerScoreCounter++;
-        playerScore.textContent = playerScoreCounter;
-    } else if (WINNER === "computer") {
-        computerScoreCounter++;
-        computerScore.textContent = computerScoreCounter;
-    }
+    
 })
 
 scissors.addEventListener("click", () => {
     playerChoice = "scissors";
-    const computerChoice = possibleChoices[Math.floor(Math.random() * 3)];
-    //console.log(playerChoice);
-    const WINNER = playRound(playerChoice, computerChoice);
-
-    if (WINNER === "player") {
-        playerScoreCounter++;
-        playerScore.textContent = playerScoreCounter;
-    } else if (WINNER === "computer") {
-        computerScoreCounter++;
-        computerScore.textContent = computerScoreCounter;
-    }
+    
 })
 
 
@@ -96,38 +71,17 @@ function playRound(playerChoice, computerChoice) {
 }
 
 
+
 /*
+const computerChoice = possibleChoices[Math.floor(Math.random() * 3)];
+    
+    const WINNER = playRound(playerChoice, computerChoice);
 
-function game() {
-    // Possible choices for the user and computer to select from
-    possibleChoices = ["rock", "paper", "scissors"];
-
-
-    // Initialise variables to keep track of scores
-    let playerScoreCounter = 0;
-    let computerScoreCounter = 0;
-
-    // Loop for specified number of rounds of rock, paper, scissors
-    for (i = 0; i < roundsToPlay; i++) {
-        // Player and Computer choices
-        const computerChoice = possibleChoices[Math.floor(Math.random() * 3)];
-
-        // Simulate the round, storing the result in roundWinner variable
-        const roundWinner = playRound(playerChoice, computerChoice);
-
-        // Updating the scores depending on who won the round
-        if (roundWinner === "player") {
-            playerScoreCounter++;
-            playerScore.textContent = playerScoreCounter;
-            roundWinner.textContent = `You Win! ${playerChoice} beats ${computerChoice}`;
-        } else if (roundWinner === "computer") {
-            computerScoreCounter++;
-            computerScore.textContent = computerScoreCounter;
-            roundWinner.textContent = `You Lose! ${computerChoice} beats ${playerChoice}`;
-        } else {
-            roundWinner.textContent = `Tie! ${playerChoice} draws with ${computerChoice}`;
-        }
+    if (WINNER === "player") {
+        playerScoreCounter++;
+        playerScore.textContent = playerScoreCounter;
+    } else if (WINNER === "computer") {
+        computerScoreCounter++;
+        computerScore.textContent = computerScoreCounter;
     }
-}
-
-game();*/
+*/

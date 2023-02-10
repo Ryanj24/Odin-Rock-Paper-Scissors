@@ -1,14 +1,14 @@
 // Get the elements from the html document
-const lowerRound = document.querySelector("#decrease");
-const increaseRound = document.querySelector("#increase");
+const lowerScore = document.querySelector("#decrease");
+const increaseScore = document.querySelector("#increase");
 const submitBtn = document.querySelector("#btn");
-const myForm = document.querySelector(".roundSelection");
+const myForm = document.querySelector(".pointSelection");
 let counter = 1;
 
 
 // Event listeners to change the number displayed on screen
 
-lowerRound.addEventListener("click", function(e) {
+lowerScore.addEventListener("click", function(e) {
     // Given the icons are within a form, we need to prevent the form
     // being submitted so we can take the value and display it
     e.preventDefault();
@@ -20,11 +20,11 @@ lowerRound.addEventListener("click", function(e) {
     }
     
     // Take the value and display it on the DOM
-    document.querySelector("#rounds").textContent = counter; 
+    document.querySelector("#points").textContent = counter; 
     
 })
 
-increaseRound.addEventListener("click", function(e) {
+increaseScore.addEventListener("click", function(e) {
     e.preventDefault();
 
     // Make the maximum number of rounds 10
@@ -33,7 +33,7 @@ increaseRound.addEventListener("click", function(e) {
     }
     
     // Take the value and display it on the DOM
-    document.querySelector("#rounds").textContent = counter;
+    document.querySelector("#points").textContent = counter;
     
 })
 
@@ -41,10 +41,11 @@ myForm.addEventListener("submit", function(e) {
     e.preventDefault();
 
 
-    const roundNumber = counter;
+    const scoreNumber = counter;
+    console.log(scoreNumber)
     //console.log(typeof(roundNumber));
 
-    localStorage.setItem("rounds", roundNumber);
+    localStorage.setItem("points", scoreNumber);
 
     window.location.href = "gamePage.html";
 })

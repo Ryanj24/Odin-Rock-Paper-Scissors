@@ -34,14 +34,14 @@ input:hover {
 .header {
     padding: 20px;
     margin-top: 150px;
-    margin-bottom: 150px;
+    margin-bottom: 100px;
 }
 
 .header h2 {
     font-size: 40px;
 }
 
-.roundSelection {
+.pointSelection {
     display: flex;
     flex-direction: column;
     justify-content: space-around;
@@ -49,20 +49,20 @@ input:hover {
     padding: 20px;
 }
 
-.roundSelection .roundDiv {
+.pointSelection .pointsDiv {
     display: flex;
     justify-content: space-around;
     padding: 20px;
 }
 
-.roundSelection .roundDiv .decreaseButton {
+.pointSelection .pointsDiv .decreaseButton {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-right: 70px;
 }
 
-.roundSelection .roundDiv #rounds {
+.pointSelection .pointsDiv #points {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -70,18 +70,18 @@ input:hover {
     font-size: 80px;
 }
 
-.roundSelection .roundDiv .increaseButton {
+.pointSelection .pointsDiv .increaseButton {
     display: flex;
     justify-content: center;
     align-items: center;
     margin-left: 70px;
 }
 
-.roundSelection .submitDiv {
+.pointSelection .submitDiv {
     margin-top: 100px;
 }
 
-.roundSelection .submitDiv input{
+.pointSelection .submitDiv input{
     padding: 20px 40px;
     font-size: 25px;
     border-radius: 10px;
